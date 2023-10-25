@@ -1,0 +1,160 @@
+.main{
+  background-image: url(../../../assets/background.jpg);
+  background-repeat: no-repeat;
+  background-size:auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.blur-circle{
+  color:white;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  background:radial-gradient(circle,rgba(0,0,0,0.71) 0%, rgba(0,0,0,0.7)70%, rgba(0,0,0,0.5) 100%);
+  
+}
+
+.loading-line{
+  width: 5px;
+  height: 70%;
+  background-color: rgb(213, 0, 0) ;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  transform: translateX(-50%);
+  animation: loadLine 3s ease-in-out;
+}
+
+@keyframes loadLine {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 70%;
+  }
+  
+}
+
+.welcome-section {
+  position: absolute;
+  height: 70%;
+  top:15%;
+  left: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  color: aliceblue;
+  width: 60%;
+}
+
+.profile-image{
+  height: 250px;
+  width: 250px;
+  min-width: 250px;
+  min-height: 250px;
+  background-color: beige;
+
+}
+
+.welcome-text{
+  position: relative;
+  left: 0;
+  padding-top: 10%;
+  padding-bottom: 5%;
+  height: 100%;
+  min-width: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome-image{
+  position: relative;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divs_in_welcome_section{
+  display: inline-flexbox;
+  justify-content: flex-start;
+}
+
+#hi{
+  font-size: 35px;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+#hi.active{
+  opacity: 1;
+}
+
+.red_gt_lt{
+  color: rgb(213, 0, 0) ;
+}
+
+#iam{
+  text-align: left;
+  font-size: 45px;
+  min-width: 10px;
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+#iam.active{
+  opacity: 1;
+}
+
+#iprojected{
+  text-align: left;
+  font-size: 35px;
+  min-width: 10px;
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+#iprojected.active{
+  opacity: 1;
+}
+
+#end_hi::before{
+  content:'</';
+  color: rgb(213, 0, 0) ;
+}
+
+#end_hi::after{
+  content:'>';
+  color: rgb(213, 0, 0) ;
+}
+
+@keyframes blink-caret {
+  from,to{
+    border-color: transparent;
+  }
+  50%{
+
+  }
+  100%{
+    border-color: white;
+  }
+}

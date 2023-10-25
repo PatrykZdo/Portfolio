@@ -1,0 +1,78 @@
+#header{
+    color: aliceblue;
+    background:rgba(0,0,0,0.3);
+    padding: 5px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: -100px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+#header.active{
+    top:0;
+}
+
+.navbar{
+    margin-right: 20px;
+    margin-top: 15px;
+    display: inherit;
+    justify-content: space-between;
+    flex:1;
+    max-width: 300px;
+}
+
+a{
+    text-decoration: none;
+    color: darkgray;
+    width: 75px;
+    text-align: center;
+    transition: color 0.3s ease; 
+    position:static;   
+}
+
+a:hover{
+    color: aliceblue;
+}
+
+a:hover::before{
+    content: '\003C';
+    color:red;
+    
+}
+
+a:hover::after{
+    content: '\003E';
+    color:red;
+    
+}
+
+
+.logo{
+    font-size: 25px;
+    margin-top: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     
+}
+
+.logo p::before{
+    content: '\003C';
+    color: red;
+    font-size: 32px;
+    font-weight:bolder;
+}
+.logo p::after{
+    content: '\003E';
+    color: red;
+    font-size: 32px;
+}
+
+p{
+    margin-left: 10px;
+}
+
+
+  
